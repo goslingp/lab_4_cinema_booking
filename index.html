@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cinema Ticket Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+        input[type="number"], input[type="checkbox"] {
+            margin-top: 5px;
+        }
+        #ages-container div {
+            margin-bottom: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+        }
+        #result {
+            margin-top: 30px;
+            padding: 15px;
+            background: #f2f2f2;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Cinema Ticket Booking</h2>
+
+<form id="ticketForm">
+    <label>
+        Number of Tickets (1–10):
+        <input type="number" id="tickets" min="1" max="10" required>
+    </label>
+
+    <div id="ages-container"></div>
+
+    <label>
+        <input type="checkbox" id="student">
+        Student Discount
+    </label>
+
+    <button type="submit">Calculate Price</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+    const ticketsInput = document.getElementById("tickets");
+    const agesContainer = document.getElementById("ages-container");
+    const form = document.getElementById("ticketForm");
+    const resultDiv = document.getElementById("result");
+
+    // Dynamically generate age fields
+    ticketsInput.addEventListener("input", () => {
+        agesContainer.innerHTML = "";
+        const count = parseInt(ticketsInput.value);
+
+        if (!count || count < 1 || count > 10) return;
+
+        for (let i = 0; i < count; i++) {
+            const div = document.createElement("div");
+            div.innerHTML = `
+                <label>Age for Ticket ${i + 1}:
+                    <input type="number" min="0" max="120" required class="age-input">
+                </label>
+            `;
+            agesContainer.appendChild(div);
+        }
+    });
+
+    // Submit form to Flask backend
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const tickets = parseInt(ticketsInput.value);
+        const ageInputs = document.querySelectorAll(".age-input");
+        const ages = Array.from(ageInputs).map(a => parseInt(a.value));
+        const student = document.getElementById("student").checked;
+
+        const response = await fetch("/calculate", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ tickets, ages, student })
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            resultDiv.innerHTML = `<strong>Error:</strong> ${data.error}`;
+            return;
+        }
+
+        // Display result
+        let html = `<h3>Total Cost: €${data.total_cost}</h3><ul>`;
+        data.breakdown.forEach(item => {
+            html += `<li>Age ${item.age} (${item.category}) — €${item.final_price}</li>`;
+        });
+        html += "</ul>";
+
+        resultDiv.innerHTML = html;
+    });
+</script>
+
+</body>
+</html>
