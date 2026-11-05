@@ -48,7 +48,8 @@ markdown_extensions:
 # Plugins
 plugins:
   - search
-  - mkdocs-material
+  - readthedocs:
+      
 
 # Extra configuration
 extra:
