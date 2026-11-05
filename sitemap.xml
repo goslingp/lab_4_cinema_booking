@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://goslingp.github.io/lab_4_cinema_booking/</loc>
+         <lastmod>2026-11-05</lastmod>
+    </url>
+    <url>
+         <loc>https://goslingp.github.io/lab_4_cinema_booking/api/core/</loc>
+         <lastmod>2026-11-05</lastmod>
+    </url>
+    <url>
+         <loc>https://goslingp.github.io/lab_4_cinema_booking/api/utils/</loc>
+         <lastmod>2026-11-05</lastmod>
+    </url>
+    <url>
+         <loc>https://goslingp.github.io/lab_4_cinema_booking/getting-started/installation/</loc>
+         <lastmod>2026-11-05</lastmod>
+    </url>
+    <url>
+         <loc>https://goslingp.github.io/lab_4_cinema_booking/getting-started/running/</loc>
+         <lastmod>2026-11-05</lastmod>
+    </url>
+    <url>
+         <loc>https://goslingp.github.io/lab_4_cinema_booking/testing/testing/</loc>
+         <lastmod>2026-11-05</lastmod>
+    </url>
+    <url>
+         <loc>https://goslingp.github.io/lab_4_cinema_booking/tutorials/advance/</loc>
+         <lastmod>2026-11-05</lastmod>
+    </url>
+    <url>
+         <loc>https://goslingp.github.io/lab_4_cinema_booking/tutorials/basic-usage/</loc>
+         <lastmod>2026-11-05</lastmod>
+    </url>
+</urlset>
