@@ -48,14 +48,7 @@ markdown_extensions:
 # Plugins
 plugins:
   - search
-  - mkdocstrings:
-    handlers:
-      python:
-        setup_commands:
-          - python -m pip install -r requirements.txt
-        options:
-          docstring_stlye: google
-          show_source: true
+  - mkdocs-material
 
 # Extra configuration
 extra:
