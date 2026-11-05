@@ -38,17 +38,12 @@ nav:
 
 # Markdown extensions
 markdown_extensions:
-  - admonition 
+  - admonition
+  - codehilite
+  - footnotes
+  - meta
   - toc:
-    permalink: true
-  - codehilite:
-    guess_lang: false
-  - pymdownx.superfences
-  - pymdownx.tabbed
-  - pymdownx.highlight
-  -  pymdownx.details
-  -  pymdownx.snippets
-  -  pymdownx.magiclink
+      permalink: true
 
 # Plugins
 plugins:
