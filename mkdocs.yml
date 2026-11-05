@@ -36,20 +36,7 @@ nav:
     - Utils Module: api/utils.md
   - Testing: teting/index.md
 
-# Markdown extensions
-markdown_extensions:
-  - admonition
-  - codehilite
-  - footnotes
-  - meta
-  - toc:
-      permalink: true
 
-# Plugins
-plugins:
-  - search
-  - readthedocs:
-      
 
 # Extra configuration
 extra:
