@@ -5,7 +5,7 @@ site_url: https://goslingp.github.io/lab_4_cinema_booking/
 
 # Theme configuration
 theme:
-  name: material
+  name: readthedocs
   language: en
   features:
     -  navigation.instant
