@@ -1,17 +1,18 @@
-# Welcome to MkDocs
+# Welcome to Peter's Cinema Booking Documentation Site
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# Navigation Structure
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Running the App: getting-started/running.md
+  - Tutorials:
+    - Basic Usage: tutorials/basic-usage.md
+    - Advance Features: tutorials/advance.md
+  - API Reference:
+    - Core Module: api/core.md
+    - Utils Module: api/utils.md
+  - Testing: teting/index.md
 
-## Commands
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
