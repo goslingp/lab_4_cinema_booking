@@ -3,7 +3,6 @@
 ## Navigation Structure
 nav:
   - [Home:](index.md) Home page
-  - [Getting Started:]()
   - [Installation:] (getting-started/installation.md)
   - [Running the App:] (getting-started/running.md)
   - Tutorials:
