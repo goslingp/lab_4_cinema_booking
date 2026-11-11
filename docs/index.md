@@ -4,12 +4,12 @@
 | Page | Comment !
 |---|---|
 | [Home:](index.md) | Home page |
-| [Installation:](getting-started/installation.md)
-| [Running the App:](getting-started/running.md)
+| [Installation:](getting-started/installation.md) | Installation |
+| [Running the App:](getting-started/running.md) | Getting Started |
  Tutorials: |---| 
-| [Basic Usage:](tutorials/basic-usage.md)
-| [Advance Features:](tutorials/advance.md)
+| [Basic Usage:](tutorials/basic-usage.md) | Basic Usage 
+| [Advance Features:](tutorials/advance.md) | Advance usage |
 | API Reference: |---|
-| [Core Module:](api/core.md) |
-| [Utils Module:](api/utils.md) |
-| [Testing:](testing/index.md) |
+| [Core Module:](api/core.md) | Core |
+| [Utils Module:](api/utils.md) | Utils |
+| [Testing:](testing/index.md) | Testing |
