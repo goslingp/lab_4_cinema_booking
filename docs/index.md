@@ -1,7 +1,7 @@
 # Welcome to Peter's Cinema Booking Documentation Site
 
 ## Navigation Structure
-| Page | Comment !
+| Page | Comment |
 |---|---|
 | [Home:](index.md) | Home page |
 | [Installation:](getting-started/installation.md) | Installation |
